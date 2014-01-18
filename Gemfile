@@ -48,3 +48,4 @@ gem 'omniauth-twitter'
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 gem "figaro"
+gem "font-awesome-rails"
