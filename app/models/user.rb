@@ -15,7 +15,7 @@ class User < ActiveRecord::Base
   def self.new_with_session(params, session)
     if session["devise.user_attributes"]
       new(session["devise.user_attributes"], without_protection: true) do |user|
-        user.attrubutes = params
+        user.attributes = params
         user.valid?
       end
     else
