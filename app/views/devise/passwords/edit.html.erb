@@ -10,11 +10,6 @@
   <div><%= f.label :password_confirmation, "Confirm new password" %><br />
   <%= f.password_field :password_confirmation %></div>
 
-  <%if f.object.encrypted_password.present? %>
-  <div><%= f.label :current_password, "Confirm new password" %><br />
-  <%= f.password_field :current_password %></div>
-  <% end %>
-
   <div><%= f.submit "Change my password" %></div>
 <% end %>
 
