@@ -51,3 +51,5 @@ gem 'omniauth-twitter'
 # gem 'debugger', group: [:development, :test]
 gem "figaro"
 gem "font-awesome-rails"
+gem "breadcrumbs_on_rails"
+gem 'kaminari'

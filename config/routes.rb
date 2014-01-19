@@ -1,13 +1,25 @@
 SkypeChats::Application.routes.draw do
 
+  root 'home#index'
+  devise_for :admins
   resources :chats
 
   devise_for :users, controllers: {omniauth_callbacks: "omniauth_callbacks"}, path_names: {sign_in: "login", sign_out: "logout"}
+  namespace :admin do
+    root to: "dashboard#index"
+      resources :brands,
+                         :users,
+                         :categories,
+                         :chats,
+                         :dashboard
+  end
+
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  root 'home#index'
+
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
