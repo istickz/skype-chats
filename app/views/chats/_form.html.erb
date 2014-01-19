@@ -1,0 +1,12 @@
+<%= simple_form_for(@chat) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.input :title, placeholder: "Название", label: false%>
+    <%= f.input  :url, placeholder: "Ссылка", label: false %>
+    <%= f.association :category, prompt: "Выберите категорию", label: false %>
+    </div>
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>
