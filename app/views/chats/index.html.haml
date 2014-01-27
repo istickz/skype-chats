@@ -1,0 +1,12 @@
+#main
+  .container
+    .row
+      #chats.col-lg-12
+        .row
+          - @chats.each do |chat|
+            .chat_item
+              .chat_icon
+                = image_tag chat.image_url(:thumb) if chat.image?
+              .chat_title
+                %p
+                  = link_to chat.title, chat

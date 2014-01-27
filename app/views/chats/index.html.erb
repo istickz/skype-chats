@@ -1,34 +1,12 @@
-<div class="content-section-b">
+<div class="container">
+<%= link_to 'Добавить чат', new_chat_path %>
 
-<h1>Listing chats</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Title</th>
-      <th>Url</th>
-      <th>Category</th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @chats.each do |chat| %>
-      <tr>
-        <td><%= chat.title %></td>
-        <td><%= chat.url %></td>
-        <td><%= chat.category_id %></td>
-        <td><%= link_to 'Show', chat %></td>
-        <td><%= link_to 'Edit', edit_chat_path(chat) %></td>
-        <td><%= link_to 'Destroy', chat, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Chat', new_chat_path %>
+<% @chats.each do |chat| %>
+    <div class="content-section-b">
+      | <%= chat.title %>
+      | <a href="<%= chat.url %>">Вступить в чат</a>
+     | <%= chat.category_id %>
+     | от пользователя <a href="https://twitter.com/<%= chat.user.nickname %>">@<%= chat.user.nickname %></a>
+   </div>
+<% end %>
 </div>

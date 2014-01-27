@@ -1,0 +1,10 @@
+.container
+  %ul.categories.nav.nav-pills
+    %li.nav_title
+      Категории:
+      %li
+        = link_to 'Все', chats_path
+    - Category.all.each do |category|
+      %li
+        = link_to category.name, category_chats_path(category_id: category.alias)
+  #categories-clear

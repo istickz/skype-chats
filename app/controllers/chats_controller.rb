@@ -4,7 +4,13 @@ class ChatsController < ApplicationController
   # GET /chats
   # GET /chats.json
   def index
-    @chats = Chat.all
+    if params[:category_id]
+      @category = Category.friendly.find(params[:category_id])
+      # @category = Category.find(params[:category_id])
+      @chats = @category.chats
+    else
+      @chats = Chat.all
+    end
   end
 
   # GET /chats/1
@@ -14,6 +20,7 @@ class ChatsController < ApplicationController
 
   # GET /chats/new
   def new
+    authenticate_user!
     @chat = Chat.new
   end
 
@@ -24,8 +31,7 @@ class ChatsController < ApplicationController
   # POST /chats
   # POST /chats.json
   def create
-    @chat = Chat.new(chat_params)
-
+    @chat = current_user.chats.build(chat_params)
     respond_to do |format|
       if @chat.save
         format.html { redirect_to @chat, notice: 'Chat was successfully created.' }
@@ -64,11 +70,11 @@ class ChatsController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_chat
-      @chat = Chat.find(params[:id])
+      @chat = Chat.friendly.find(params[:id])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def chat_params
-      params.require(:chat).permit(:title, :url, :category_id)
+      params.require(:chat).permit(:title, :url, :category_id, :image, :description)
     end
 end

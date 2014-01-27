@@ -1,0 +1,29 @@
+#main
+  .container
+    .row
+      #chats.col-lg-12
+        .row
+          .col-lg-3
+            = image_tag @chat.image_url(:thumb) if @chat.image?
+          .col-lg-9
+            %h3
+              = @chat.title
+              %small
+                Категория:
+                - if @chat.category.nil?
+                  Без категории
+                - else
+                  = link_to @chat.category.name, @chat.category, class: "btn btn-warning btn-xs"
+              = link_to @chat.url, class: "btn btn-primary btn-lg pull-right" do
+                %i.fa.fa-skype
+                Вход
+            %br/
+            %h5
+              Описание:
+            %hr/
+            %p
+              = @chat.description
+
+            %hr/
+
+

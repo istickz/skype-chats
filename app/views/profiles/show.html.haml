@@ -1,0 +1,16 @@
+.container
+  .row
+    .col-md-4
+      .well.well-sm
+        .media
+          %a.thumbnail.pull-left{href: "#"}
+            %img.media-object{src: "http://www.gravatar.com/avatar/a13ac7aed64918b6354f48da59490e3a?s=80"}/
+          .media-body
+            %h4.media-heading
+              = @user.nickname
+            %p
+              %span.label.label-info
+                = @user.chats.count
+                чатов
+            %p
+              %span.label.label-primary 89 подписок

@@ -53,3 +53,8 @@ gem "figaro"
 gem "font-awesome-rails"
 gem "breadcrumbs_on_rails"
 gem 'kaminari'
+gem 'carrierwave'
+gem "rmagick"
+gem "haml-rails"
+gem 'acts_as_commentable'
+gem 'friendly_id'
