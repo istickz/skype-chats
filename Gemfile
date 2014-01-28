@@ -62,7 +62,8 @@ gem "pundit"
 gem 'annotate', ">=2.6.0"
 
 group :development do
-  gem 'mina'
+  gem 'rvm-capistrano'
+  gem 'capistrano'
 end
 group :production do
   gem 'unicorn'
