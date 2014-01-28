@@ -43,3 +43,4 @@ uploads/
 !uploads/
 /uploads/
 !/uploads/
+deploy.rb
