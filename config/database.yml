@@ -11,7 +11,7 @@
 development:
   adapter: mysql2
   encoding: utf8
-  database: devise_facebook_development
+  database: skype_chats_development
   pool: 5
   username: root
   password: 4800907
@@ -29,11 +29,11 @@ development:
 #   password:
 #   socket: /var/run/mysqld/mysqld.sock
 
-# production:
-#   adapter: mysql2
-#   encoding: utf8
-#   database: devise_facebook_production
-#   pool: 5
-#   username: root
-#   password:
-#   socket: /var/run/mysqld/mysqld.sock
+production:
+  adapter: mysql2
+  encoding: utf8
+  database: skype_chats_production
+  pool: 5
+  username: root
+  password: kswvz45c
+  socket: /var/run/mysqld/mysqld.sock
