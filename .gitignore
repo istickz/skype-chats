@@ -39,7 +39,7 @@ config/initializers/secret_token.rb
 /config/application.yml
 
 # Ignore uploads folder
-/public/uploads/*
-/public/uploads/
-!/public/uploads
-!/public/uploads/*
+uploads/
+!uploads/
+/uploads/
+!/uploads/
