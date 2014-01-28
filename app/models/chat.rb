@@ -20,6 +20,8 @@ class Chat < ActiveRecord::Base
   mount_uploader :image, ImageUploader
   belongs_to :category
   belongs_to :user
+  validates :title, :description, :image, presence: true
+
   def should_generate_new_friendly_id?
     new_record?
   end
