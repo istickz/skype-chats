@@ -35,5 +35,5 @@ production:
   database: skype_chats_production
   pool: 5
   username: root
-  password: kswvz45c
+  password: 4800907
   socket: /var/run/mysqld/mysqld.sock
