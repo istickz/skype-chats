@@ -10,8 +10,9 @@
     = javascript_include_tag "application"
     = csrf_meta_tags
   %body
-    = render 'layouts/navigation'
-    = render 'layouts/categories'
-    = render 'layouts/messages'
-    = yield
+    .wrapper
+      = render 'layouts/navigation'
+      = render 'layouts/categories'
+      = render 'layouts/messages'
+      = yield
     = render 'layouts/footer'
