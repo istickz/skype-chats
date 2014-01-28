@@ -39,3 +39,26 @@
     }
   }
 }
+
+
+
+.chat-widget {
+  text-align: center;
+  padding-top: 20px;
+  .options {
+    margin-top: 10px;
+
+    a.launch-skype {
+      display: block;
+      padding-top: 8px;
+      background: #3498db;
+      color: #fff;
+      height: 40px;
+      font-size: 16px;
+      &:hover {
+        opacity: 0.9;
+        text-decoration: none;
+      }
+    }
+  }
+}

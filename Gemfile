@@ -58,3 +58,4 @@ gem "rmagick"
 gem "haml-rails"
 gem 'acts_as_commentable'
 gem 'friendly_id'
+gem "pundit"

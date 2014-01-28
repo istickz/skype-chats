@@ -4,7 +4,13 @@
       #chats.col-lg-12
         .row
           .col-lg-3
-            = image_tag @chat.image_url(:thumb) if @chat.image?
+            .chat-widget.well.well-sm
+              .icon
+                = image_tag @chat.image_url(:thumb) if @chat.image?
+              .options
+                = link_to @chat.url , class: "launch-skype" do
+                  %i.fa.fa-skype
+                  Вход
           .col-lg-9
             %h3
               = @chat.title
@@ -13,10 +19,10 @@
                 - if @chat.category.nil?
                   Без категории
                 - else
-                  = link_to @chat.category.name, @chat.category, class: "btn btn-warning btn-xs"
-              = link_to @chat.url, class: "btn btn-primary btn-lg pull-right" do
-                %i.fa.fa-skype
-                Вход
+                  = link_to @chat.category.name, category_chats_path(category_id: @chat.category.alias), class: "btn btn-warning btn-xs"
+            - if @permission
+              = link_to 'Редактировать', edit_chat_path(@chat), class: "label label-info"
+              = link_to 'Удалить', @chat, method: :delete, data: { confirm: 'Вы уверены?' }, class: "label label-danger"
             %br/
             %h5
               Описание:
@@ -25,5 +31,7 @@
               = @chat.description
 
             %hr/
+
+
 
 
