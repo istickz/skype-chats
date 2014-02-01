@@ -38,9 +38,8 @@ config/initializers/secret_token.rb
 # Ignore application configuration
 /config/application.yml
 
-# Ignore uploads folder
-uploads/
-!uploads/
-/uploads/
-!/uploads/
+# Ignore uploaded files
+/public/uploads
+
+
 deploy.rb
