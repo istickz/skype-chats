@@ -43,3 +43,4 @@ config/initializers/secret_token.rb
 
 
 deploy.rb
+database.yml
