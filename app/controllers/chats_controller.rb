@@ -16,7 +16,9 @@ class ChatsController < ApplicationController
   # GET /chats/1
   # GET /chats/1.json
   def show
-    @permission = ChatPolicy.new(current_user, @chat).user_chat?
+    if current_user
+      @permission = ChatPolicy.new(current_user, @chat).user_chat?
+    end
   end
 
   # GET /chats/new
