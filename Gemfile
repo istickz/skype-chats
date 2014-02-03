@@ -70,3 +70,6 @@ group :production do
   gem 'execjs'
   gem 'therubyracer'
 end
+
+
+gem 'russian', '~> 0.6.0'
