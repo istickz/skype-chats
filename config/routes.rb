@@ -1,5 +1,7 @@
 SkypeChats::Application.routes.draw do
 
+
+  get 'help', to: 'static_pages#help'
   get "profiles/show"
   root 'home#index'
 

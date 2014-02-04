@@ -193,7 +193,7 @@ p {
 footer {
   height: 50px;
   padding-top: 5px;
-  margin: -50px auto 0;
+  // margin: -50px auto 0;
   position: relative;
   background-color: #f8f8f8;
 }
@@ -243,4 +243,9 @@ ul.categories {
 }
 #categories-clear{
   height: 60px;
+}
+
+
+ol li {
+  font-weight: normal;
 }

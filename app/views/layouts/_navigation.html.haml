@@ -16,11 +16,9 @@
               %i.fa.fa-plus-circle>
               Добавить чат
         %li
-          %a{href: "#"} Новости
-        %li
           = link_to "Чаты", chats_path
         %li
-          %a{href: "#t"} Помощь
+          = link_to "Помощь", help_path
         %li
           - if user_signed_in?
             %a.dropdown-toggle{"data-toggle" => "dropdown", href: "#"}
