@@ -29,8 +29,6 @@ end
 
 group :production do
   gem 'unicorn'
-  gem 'execjs'
-  gem 'therubyracer', platforms: :ruby
 end
 
 gem 'russian', '~> 0.6.0'
