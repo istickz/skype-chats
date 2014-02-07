@@ -48,6 +48,6 @@ gem 'carrierwave'
 gem 'friendly_id'
 gem 'annotate', ">=2.6.0"
 
-
+gem 'newrelic_rpm'
 
 
