@@ -1,5 +1,5 @@
 Category.destroy_all
-categories = Category.create([
+Category.create([
   { alias:'auto', name:'Автомобили' },
   { alias:'business', name:'Бизнес' },
   { alias:'art', name:'Искусство' },
